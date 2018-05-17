@@ -1,0 +1,53 @@
+{"result": {
+        "botId": "5ae6de074056af0550de59fc",
+        "IntentName": "Review Action Items",
+        "BotIntentFlow": [
+            {
+                "answer": "",
+                "entityType": "",
+                "isSent": 0,
+                "data": "2 2 2 0 0 0",
+                "duration": 0,
+                "id": "42eb3d75-57d4-9f65-af3c-4ca649218908",
+                "class": "half",
+                "icon": "field-text",
+                "inputType": "string",
+                "name": "Text"
+            },
+            {
+                "name": "Button",
+                "inputType": "string",
+                "icon": "field-text",
+                "class": "half",
+                "id": "a4072547-e4e2-e88c-d003-393746753cb4",
+                "duration": 0,
+                "buttonoptions": "Contingencies Expiring Today",
+                "data": "You have 10 contractual contingencies today and 15 this week. You also have 3 appointments today and 7 this week. Which would you like to review now?",
+                "isSent": 0,
+                "entityType": "",
+                "answer": ""
+            }
+        ],
+        "isLuisFailed": false,
+        "menutrigger": {
+            "_id": "5ae6e8fa4056af0550de5a0a",
+            "MenuMessage": "Seems you are confused, i can help you with below options",
+            "BotId": "5ae6de074056af0550de59fc",
+            "__v": 0,
+            "MenuIntent": [
+                {
+                    "IntentName": "Review Action Items"
+                },
+                {
+                    "IntentName": "Review Contingencies"
+                },
+                {
+                    "IntentName": "Review Appointments"
+                },
+                {
+                    "IntentName": "Contingencies Expiring Today"
+                }
+            ]
+        }
+    }
+}

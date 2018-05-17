@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="60" id="KGk-i7-Jjw" customClass="ChatBubble" customModule="Closio" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="332" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="332" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left" translatesAutoresizingMaskIntoConstraints="NO" id="UNl-Aq-btk">
+                        <rect key="frame" x="10" y="8" width="46" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="46" id="AiR-CW-1hU"/>
+                            <constraint firstAttribute="width" secondItem="UNl-Aq-btk" secondAttribute="height" multiplier="1:1" constant="1" id="krk-Y6-85C"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1lN-IQ-tEx">
+                        <rect key="frame" x="66" y="7" width="59.5" height="45"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4K-OU-w6U">
+                                <rect key="frame" x="10" y="6" width="39.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="d4K-OU-w6U" firstAttribute="leading" secondItem="1lN-IQ-tEx" secondAttribute="leading" constant="10" id="1ll-fR-x1w"/>
+                            <constraint firstItem="d4K-OU-w6U" firstAttribute="top" secondItem="1lN-IQ-tEx" secondAttribute="top" constant="6" id="P09-sp-69M"/>
+                            <constraint firstAttribute="trailing" secondItem="d4K-OU-w6U" secondAttribute="trailing" constant="10" id="nX0-jD-I07"/>
+                            <constraint firstAttribute="bottom" secondItem="d4K-OU-w6U" secondAttribute="bottom" constant="7.5" id="w9f-VC-qtY"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="1lN-IQ-tEx" secondAttribute="bottom" constant="7" id="9pl-mL-6IX"/>
+                    <constraint firstItem="UNl-Aq-btk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="CB9-gi-1OG"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1lN-IQ-tEx" secondAttribute="trailing" constant="10" id="EQe-tM-2QS"/>
+                    <constraint firstItem="1lN-IQ-tEx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="JQy-No-iHS"/>
+                    <constraint firstItem="1lN-IQ-tEx" firstAttribute="leading" secondItem="UNl-Aq-btk" secondAttribute="trailing" constant="10" id="gwn-5k-2gK"/>
+                    <constraint firstItem="UNl-Aq-btk" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="0.75" id="mJz-ls-oBb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cellSafeView" destination="1lN-IQ-tEx" id="6q4-LY-3xN"/>
+                <outlet property="cnstTrailing" destination="EQe-tM-2QS" id="fOE-s7-8KM"/>
+                <outlet property="lblTextMessage" destination="d4K-OU-w6U" id="UxC-oU-AyH"/>
+                <outlet property="leftpicProfile" destination="UNl-Aq-btk" id="oub-0w-BbN"/>
+            </connections>
+            <point key="canvasLocation" x="31" y="60"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="left" width="46" height="46"/>
+    </resources>
+</document>
